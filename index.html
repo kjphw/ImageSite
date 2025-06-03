@@ -31,8 +31,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
               
               //Set source of image and alt attributes
               image.src = src;
-              image.height = 400;
-              image.width = 600;
+              image.height = 600;
+              image.width = 800;
               image.alt = alt;
               
               //Create and aply a centered heading with the image
@@ -45,12 +45,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
           
           const day = new Date();
           let time = day.getHours();
+          let color;
           
           if(time >= 6 && time < 12) {
-            displayImage("DSC_0835.JPG", "Beach Sunrise"); // Morning image 1
+              displayImage("DSC_0835.JPG", "Beach Sunrise"); // Morning image 1
+              color = 'lavendar';
           } else if(time >= 12 && time < 18) {
-            displayImage("DSC_0446.JPG", "People enjoying the beach"); // Afternoon image 2
-          } else {displayImage("DSC_0381.JPG", "Nighttime Bonfire");} // Evening/night image 3
+              displayImage("DSC_0446.JPG", "People enjoying the beach"); // Afternoon image 2
+              color = 'light blue';
+          } else {
+              displayImage("DSC_0381.JPG", "Nighttime Bonfire"); // Evening/night image 3
+              color = 'black';
+          }
+            
+        document.body.style.backgroundColor = color; // Applies the color
 
         </script>
     </body>

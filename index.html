@@ -35,8 +35,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
               image.width = 600;
               image.alt = alt;
               
-              //Applies element to body of doc
-              document.body.appendChild("<H1 Align="Center">".image."</H1>");
+              //Create and aply a centered heading with the image
+              let div = document.createElement("div");
+              div.style.textAlign = "center";
+              div.appendChild(image);
+
+              document.body.appendChild(div);
           }
           
           const day = new Date();

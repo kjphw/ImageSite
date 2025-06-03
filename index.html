@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edit this template
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Time of Day</title>
+    </head>
+    <body>
+        <FONT COLOR="white"> <B>Name:</B> Katelyna Pastrana
+        <BR><B>Course:</B> CS4813  Web Applications Programming
+        <BR><B>Major:</B> Computer Science
+        <BR> <B>Simple Message:</B> Welcome to my dynamic webpage!</FONT>
+        <script>
+          /***********************************************************************************/
+          /* Name: Time Changing Images                                                      */
+          /* Desription: Displays a different color dependent on time of day.                */
+          /* Date: May 27, 2025                                                              */
+          /* Author: Katelyna Pastrana                                                       */
+          /* References: https://www.ezmcq.com/ez/show_aia_link.php?kw=web&&city=JavaScript, */
+          /*    https://www.youtube.com/watch?v=hdI2bqOjy3c, Karen Works Lectures in Canvas, */
+          /*    https://www.w3schools.com/jsref/jsref_gethours.asp, Backgrond Colors, and    */
+          /*    https://www.geeksforgeeks.org/how-to-display-images-in-javascript/           */
+          /***********************************************************************************/
+
+          function displayImage(src, alt) {
+              //Creates a new image element
+              let image = document.createElement("img");
+              
+              //Set source of image and alt attributes
+              image.src = src;
+              image.height = 200;
+              image.width = 300;
+              image.alt = alt;
+              
+              //Applies element to body of doc
+              document.body.appendChild(img);
+          }
+          
+          const day = new Date();
+          let time = day.getHours();
+          
+          if(time >= 6 && time < 12) {
+            displayImage("DSC_0835.JPG", "Beach Sunrise"); // Morning image 1
+          } else if(time >= 12 && time < 18) {
+            displayImage("DSC_0446.JPG", "People enjoying the beach"); // Afternoon image 2
+          } else {displayImage("DSC_0381.JPG", "Nighttime Bonfire");} // Evening/night image 3
+
+        </script>
+    </body>
+</html>
